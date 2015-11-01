@@ -5,9 +5,15 @@
   <input type="text" ng-model="composition" ng-keyup="enterNote()">
 </md-input-container>
 
-
 <hr>
 
 <span ng-repeat="n in noteList">
 	<md-button class="md-raised" ng-click="playNote(n)">{{n}}</md-button>
 </span>
+
+Synth:
+<md-input-container>
+  <md-select ng-model="synth" aria-label="Synth">
+    <md-option ng-value="s" ng-repeat="s in synths">{{ s }}</md-option>
+  </md-select>
+</md-input-container>

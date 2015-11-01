@@ -9,7 +9,9 @@ class PlayController < ApplicationController
 
   def note
   	# expect a single note or multiple notes (chord)
-	sonic_run "play #{params[:note]}"
+  	synth = params[:synth] || ':blade' 
+  	synth = ":" + synth if synth[0] != ":"
+	sonic_run "use_synth #{synth}; play #{params[:note]}"
 	render json:{note: params[:note]}
   end
 
