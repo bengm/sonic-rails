@@ -1,14 +1,14 @@
-var app = angular.module('hello', [
-    'templates', 'ngRoute', 'ngResource', 'directives', 'angular-flash.service',
-    'angular-flash.flash-alert-directive', 'ui.bootstrap'
+var app = angular.module('appSonic', [
+    'templates', 
+    'ngRoute', 
+    'ngResource', 
+    'directives', 
+    'ngMaterial',
+    'ngAnimate'
 ]);
 
 app.config([
-'$routeProvider', 'flashProvider', function ($routeProvider, flashProvider) {
-    flashProvider.errorClassnames.push("alert-danger");
-    flashProvider.warnClassnames.push("alert-warning");
-    flashProvider.infoClassnames.push("alert-info");
-    flashProvider.successClassnames.push("alert-success");
+'$routeProvider', function ($routeProvider) {
     return $routeProvider.when('/', {
         templateUrl: "Home/Home.html",
         controller: 'HomeController'

@@ -1,3 +1,13 @@
-﻿<div class="jumbotron">
-    Hello World!
-</div>
+﻿<h1>Hello Sonic</h1>
+
+<md-input-container>
+  <label>Compose</label>
+  <input type="text" ng-model="composition" ng-keyup="enterNote()">
+</md-input-container>
+
+
+<hr>
+
+<span ng-repeat="n in noteList">
+	<md-button class="md-raised" ng-click="playNote(n)">{{n}}</md-button>
+</span>

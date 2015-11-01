@@ -11,12 +11,12 @@
 // about supported directives.
 //
 //= require angular/angular
-//= require angular-bootstrap/ui-bootstrap-tpls
+//= require angular-material/angular-material
+//= require angular-animate/angular-animate
+//= require angular-aria/angular-aria
 //= require angular-route/angular-route
 //= require angular-resource/angular-resource
-//= require angular-flash/dist/angular-flash
 //= require angular-rails-templates
-//= require d3/d3
 //= require utilities
 //= require app.js
 //= require_tree .

@@ -13,6 +13,9 @@ gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
+# SONIC PI to play music!
+gem 'sonic-pi-cli'
+
 # HTTParty to interact with external REST APIs
 gem 'httparty'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
