@@ -1,5 +1,5 @@
 # Sonic Rails
-A AngularJS + Ruby on Rails app to control Sonic Pi
+AngularJS + Ruby on Rails app to control Sonic Pi
 
 ## Installation
 *Windows Users should perform the following steps using the Git Shell*
