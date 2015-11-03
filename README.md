@@ -10,3 +10,6 @@ AngularJS + Ruby on Rails app to control Sonic Pi
 
 ## SonicPi
 [Sonic Pi](http://sonic-pi.net/) must be installed and running.
+
+## Collaborative Mode
+If others can access your app, you can play together! See [server instructions](server_instructions.md)
