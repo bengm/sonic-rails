@@ -12,6 +12,9 @@ app.config([
     return $routeProvider.when('/', {
         templateUrl: "Synth/Synth.html",
         controller: 'SynthController'
+    }).when('/Synth', {
+        templateUrl: "Synth/Synth.html",
+        controller: 'SynthController'
     }).when('/Sample', {
         templateUrl: "Sample/Sample.html",
         controller: 'SampleController'
