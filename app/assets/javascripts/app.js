@@ -10,8 +10,11 @@ var app = angular.module('appSonic', [
 app.config([
 '$routeProvider', function ($routeProvider) {
     return $routeProvider.when('/', {
-        templateUrl: "Home/Home.html",
-        controller: 'HomeController'
+        templateUrl: "Synth/Synth.html",
+        controller: 'SynthController'
+    }).when('/Sample', {
+        templateUrl: "Sample/Sample.html",
+        controller: 'SampleController'
     })
 }
 ]);
