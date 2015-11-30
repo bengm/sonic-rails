@@ -1,74 +1,78 @@
 ﻿<h1>Samples</h1>
 
-<md-button class="md-raised" ng-click="playSample()">
-  play
-</md-button>
-
 <div layout="row" layout-wrap>
-  <div flex="20" flex-sm="100" flex-md="40">
 
-<md-card>
-  <md-card-content>
-    <h2 class="md-title">Sample</h2>
-    <md-input-container>
-      <md-select ng-model="sample" aria-label="Sample">
-        <md-option ng-value="s" ng-repeat="s in samples">{{ s }}</md-option>
-      </md-select>
-    </md-input-container>
-  </md-card-content>
-</md-card>
+  <div flex="100">
+    <md-button class="md-raised" ng-click="playSample(sample)" ng-repeat="sample in calculatedSamples()">
+      {{sample}}
+    </md-button>
+  </div>
+
+  <div flex="40" flex-sm="100" flex-md="60">
+    
+    <md-card>
+      <md-card-content>
+        <h2 class="md-title">Options</h2>
+
+        <div layout>
+          <div flex="20" layout layout-align="center center">
+            <span class="md-body-1">Attack</span>
+          </div>
+          <md-slider flex min="0" max="3" step="0.1" ng-model="options.attack" id="attack-slider" aria-label="attack">
+          </md-slider>
+          <div flex="20" layout layout-align="center center">
+            <input type="number" ng-model="options.attack" aria-label="attack" aria-controls="attack-slider">
+          </div>
+        </div>
+        <div layout>
+          <div flex="20" layout layout-align="center center">
+            <span class="md-body-1">Sustain</span>
+          </div>
+          <md-slider flex ng-model="options.sustain" min="0" max="3" step="0.1" aria-label="sustain" id="sustain-slider" class="md-primary">
+          </md-slider>
+          <div flex="20" layout layout-align="center center">
+            <input type="number" ng-model="options.sustain" aria-label="sustain" aria-controls="sustain-slider">
+          </div>
+        </div>
+        <div layout>
+          <div flex="20" layout layout-align="center center">
+            <span class="md-body-1">Release</span>
+          </div>
+          <md-slider flex ng-model="options.release" min="0" max="3" step="0.1" aria-label="release" id="release-slider" class="md-accent">
+          </md-slider>
+          <div flex="20" layout layout-align="center center">
+            <input type="number" ng-model="options.release" aria-label="release" aria-controls="release-slider">
+          </div>
+        </div>
+        <div layout>
+          <div flex="20" layout layout-align="center center">
+            <span class="md-body-1">Rate</span>
+          </div>
+          <md-slider flex ng-model="options.rate" min="-5" max="5" step="0.1" aria-label="rate" id="rate-slider" class="md-accent">
+          </md-slider>
+          <div flex="20" layout layout-align="center center">
+            <input type="number" ng-model="options.rate" aria-label="rate" aria-controls="rate-slider">
+          </div>
+        </div>
+
+
+      </md-card-content>
+    </md-card>
 
   </div>
-  <div flex="30" flex-sm="100" flex-md="60">
-    
-<md-card>
-  <md-card-content>
-    <h2 class="md-title">Options</h2>
 
-    <div layout>
-      <div flex="20" layout layout-align="center center">
-        <span class="md-body-1">Attack</span>
-      </div>
-      <md-slider flex min="0" max="3" step="0.1" ng-model="options.attack" id="attack-slider" aria-label="attack">
-      </md-slider>
-      <div flex="20" layout layout-align="center center">
-        <input type="number" ng-model="options.attack" aria-label="attack" aria-controls="attack-slider">
-      </div>
-    </div>
-    <div layout>
-      <div flex="20" layout layout-align="center center">
-        <span class="md-body-1">Sustain</span>
-      </div>
-      <md-slider flex ng-model="options.sustain" min="0" max="3" step="0.1" aria-label="sustain" id="sustain-slider" class="md-primary">
-      </md-slider>
-      <div flex="20" layout layout-align="center center">
-        <input type="number" ng-model="options.sustain" aria-label="sustain" aria-controls="sustain-slider">
-      </div>
-    </div>
-    <div layout>
-      <div flex="20" layout layout-align="center center">
-        <span class="md-body-1">Release</span>
-      </div>
-      <md-slider flex ng-model="options.release" min="0" max="3" step="0.1" aria-label="release" id="release-slider" class="md-accent">
-      </md-slider>
-      <div flex="20" layout layout-align="center center">
-        <input type="number" ng-model="options.release" aria-label="release" aria-controls="release-slider">
-      </div>
-    </div>
-    <div layout>
-      <div flex="20" layout layout-align="center center">
-        <span class="md-body-1">Rate</span>
-      </div>
-      <md-slider flex ng-model="options.rate" min="-5" max="5" step="0.1" aria-label="rate" id="rate-slider" class="md-accent">
-      </md-slider>
-      <div flex="20" layout layout-align="center center">
-        <input type="number" ng-model="options.rate" aria-label="rate" aria-controls="rate-slider">
-      </div>
-    </div>
+  <div flex="20" flex-sm="100" flex-md="40">
 
-
-  </md-card-content>
-</md-card>
+    <md-card>
+      <md-card-content>
+        <h2 class="md-title">Sample Set</h2>
+        <md-input-container>
+          <md-select ng-model="sampleSet" aria-label="Sample Set">
+            <md-option ng-value="ss" ng-repeat="ss in sampleSets">{{ ss }}</md-option>
+          </md-select>
+        </md-input-container>
+      </md-card-content>
+    </md-card>
 
   </div>
 

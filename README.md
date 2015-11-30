@@ -5,7 +5,7 @@ AngularJS + Ruby on Rails app to control Sonic Pi
 *Windows Users should perform the following steps using the Git Shell*
 
 1. `npm install`
-2. `rake db:reset`
+2. `bundle install`
 3. `rake bower:install`
 
 ## SonicPi
